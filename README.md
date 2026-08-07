@@ -50,6 +50,7 @@ openssl pkeyutl -verify -pubin -inkey /tmp/teum.pub -rawin -in /tmp/teum.mjs -si
 
 | 판 | 날짜 | SHA-256 |
 |---|---|---|
+| v6 | 2026-08-07 | `d7d8944aa0cbf687337767ab67d98d4ecf99e8d722126fc9ff3bd505aed11f6d` |
 | v5 | 2026-08-07 | `53b2d4bcbade91e26bf0d2efcc70830530240289825d97a46b362fb150e70ea9` |
 | v4 | 2026-08-07 | `7803e9870f030f8a214a3e350d6337304a27bc6804c4f98156d28cbee72f4cca` |
 

@@ -48,12 +48,28 @@ openssl pkeyutl -verify -pubin -inkey /tmp/teum.pub -rawin -in /tmp/teum.mjs -si
 
 ## 릴리즈
 
-| 판 | 날짜 | SHA-256 |
-|---|---|---|
-| v7 | 2026-08-10 | `dfebf9bdaba3ab91a4238c9f3629e603d54c707e3edaa5bf68f289ea74ea7a59` |
-| v6 | 2026-08-07 | `d7d8944aa0cbf687337767ab67d98d4ecf99e8d722126fc9ff3bd505aed11f6d` |
-| v5 | 2026-08-07 | `53b2d4bcbade91e26bf0d2efcc70830530240289825d97a46b362fb150e70ea9` |
-| v4 | 2026-08-07 | `7803e9870f030f8a214a3e350d6337304a27bc6804c4f98156d28cbee72f4cca` |
+| 판 | 날짜 | SHA-256 | 서명 |
+|---|---|---|---|
+| v14 | 2026-08-24 | `a93a3653c0ed00bd74de8adab3ebad174a1392efb7924b23c6112c2a7b634757` | [statusline.v14.mjs.sig](statusline.v14.mjs.sig) |
+| v13 | 2026-08-21 | `b69b79d93399117029edca42df0182378f43cc5112b345455514ca4279603e59` | [statusline.v13.mjs.sig](statusline.v13.mjs.sig) |
+| v12 | 2026-08-21 | `f7b6adc69eded4c411f880b9e5a6c5c949feed796742cbb47185c6127b3c8494` | [statusline.v12.mjs.sig](statusline.v12.mjs.sig) |
+| v11 | 2026-08-21 | `7fb29f382604a6e8e7b9e334cb8a09daac2abfc8becff07e73f2394afc5c396b` | [statusline.v11.mjs.sig](statusline.v11.mjs.sig) |
+| v10 ⚠️ | 2026-08-20 | `6e5eee8007d8787c176cc6d30f0d9597b054f97e822b7ded297901282bb4fe82` | [statusline.v10.6e5eee80.mjs.sig](statusline.v10.6e5eee80.mjs.sig) |
+| v10 ⚠️ | 2026-08-20 | `dc4b4807442fd08c252be17e9de52d70df1b0bb2c284b50e644e4e3a3b74b232` | [statusline.v10.dc4b4807.mjs.sig](statusline.v10.dc4b4807.mjs.sig) |
+| v10 | 2026-08-20 | `cf9fde3cd4e5e537c21fa61ca45172d95204d08ad0550c24ca527bfb9b03f274` | [statusline.v10.mjs.sig](statusline.v10.mjs.sig) |
+| v9 | 2026-08-18 | `20c2febc6abec3d37caeda4f0508f9d0c1576f27831f0449090a0ffb83d8bb3b` | [statusline.v9.mjs.sig](statusline.v9.mjs.sig) |
+| v8 | 2026-08-14 | `2e94b463d59483c88a337b91f527395e971370b49fe52ecc5e79b6300c95d9bb` | [statusline.v8.mjs.sig](statusline.v8.mjs.sig) |
+| v7 | 2026-08-10 | `dfebf9bdaba3ab91a4238c9f3629e603d54c707e3edaa5bf68f289ea74ea7a59` | [statusline.v7.mjs.sig](statusline.v7.mjs.sig) |
+| v6 | 2026-08-07 | `d7d8944aa0cbf687337767ab67d98d4ecf99e8d722126fc9ff3bd505aed11f6d` | [statusline.v6.mjs.sig](statusline.v6.mjs.sig) |
+| v5 | 2026-08-07 | `53b2d4bcbade91e26bf0d2efcc70830530240289825d97a46b362fb150e70ea9` | [statusline.v5.mjs.sig](statusline.v5.mjs.sig) |
+| v4 | 2026-08-07 | `7803e9870f030f8a214a3e350d6337304a27bc6804c4f98156d28cbee72f4cca` | (서명 도입 전) |
+
+> ⚠️ **v10이 셋입니다.** 2026-08-20에 같은 번호로 세 번 배포했습니다(우리 실수). 자가 갱신은
+> "받은 판이 지금보다 높을 때만 설치"라서, 이미 v10을 받은 기기는 그 뒤 v10들을 받지 못했습니다.
+> 그래서 v10 항목은 해시 앞자리로 구분해 **전부** 올려 둡니다. 여러분의 `verify` 결과가 셋 중
+> 하나와 맞으면 정상입니다. 2026-08-21부터는 배포마다 번호를 올리고, 그러지 않으면
+> 릴리즈 스크립트가 배포를 막습니다.
+
 
 v3 이전은 서명 체계를 도입하기 전이라 해시를 남기지 않았습니다. 소급해서 적으면 검증된 값처럼
 보이지만 그렇지 않으므로, 있는 것만 적습니다.
